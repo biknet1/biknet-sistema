@@ -2431,8 +2431,8 @@ const productos = [
   {codigo: '898I', descripcion: 'OPTICA IZQUIERDA KANGOO 08/12 COMANDO ELECTRICO SIN MOTOR', stock: 1, ubicacion: 'DEPTO 1, HAB 2, ESTANTERIA LADO PUERTA', precio: ''},
   {codigo: '898D', descripcion: 'OPTICA IZQUIERDA KANGOO 08/12 COMANDO ELECTRICO SIN MOTOR', stock: 1, ubicacion: 'DEPTO 1, HAB 2, ESTANTERIA LADO PUERTA', precio: ''},
   {codigo: '5176/2', descripcion: 'MOLDURA REJILLA RENAULT LOGAN 10/3 CAPOT SUP. CROMADA', stock: 1, ubicacion: 'DEPTO 2, COCINA, ESTANTERIA 1, CAJON N°12', precio: ''},
-  {codigo: '40765', descripcion: 'PARAGOLPE DELANTERO LOGAN F2 10/13', stock: 1, ubicacion: 'DEPTO 2, HABITACION 2, N° 2', precio: ''}
-];
+  {codigo: '40765', descripcion: 'PARAGOLPE DELANTERO LOGAN F2 10/13', stock: 1, ubicacion: 'DEPTO 2, HABITACION 2, N° 2', precio: ''}];
+
 
 
 const input = document.getElementById("search");
