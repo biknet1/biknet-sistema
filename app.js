@@ -1,0 +1,1 @@
+console.log("Sistema Biknet cargado correctamente.");
