@@ -2,12 +2,27 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>BIKNET AUTOPARTES</title>
+    <title>Buscador - Biknet Autopartes</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Bienvenido al sistema de stock de Biknet Autopartes</h1>
-    <p>Buscador, carrito, historial y más estarán disponibles acá.</p>
+    <h1>Buscador de Productos</h1>
+    <input type="text" id="search" placeholder="Buscar por código o descripción...">
+    <table id="results">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Descripción</th>
+                <th>Stock</th>
+                <th>Ubicación</th>
+                <th>Precio</th>
+                <th>Disponibilidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Resultados van acá -->
+        </tbody>
+    </table>
     <script src="app.js"></script>
 </body>
 </html>
