@@ -150,6 +150,16 @@ const productos = [
     "proveedor": "CIFAM",
     "precio": "",
     "stock": 1
-  }   ];
+  },
+  {
+    "codigo": "1146",
+    "descripcion": "KIT LEVAS VÁLVULAS CHEVROLET CORSA 1.6 8V",
+    "ubicacion": "DEPTO 1, ESTANTERÍA ALTA, CAJA 7",
+    "proveedor": "",
+    "precio": "",
+    "stock": 2
+  },
+  {
+    ];
 
 export default productos;
