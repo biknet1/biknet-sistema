@@ -4,12 +4,8 @@ function mostrarProductos(lista) {
 
   lista.forEach((producto) => {
     const div = document.createElement("div");
-    div.innerHTML = `
-      <strong>${producto.codigo}</strong> - ${producto.descripcion}<br>
-      <em>Stock:</em> ${producto.stock} <br>
-      <em>Ubicación:</em> ${producto.ubicacion} <br>
-      <em>Precio:</em> ${producto.precio || 'Sin precio'} <br>
-      <hr>`;
+    div.classList.add("producto");
+    div.textContent = ${producto.codigo} - ${producto.descripcion} | Stock: ${producto.stock} | Ubicación: ${producto.ubicacion} | Precio: ${producto.precio || 'Sin precio'};
     contenedor.appendChild(div);
   });
 
