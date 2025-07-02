@@ -1,32 +1,37 @@
-import productos from './datos.js';
+function mostrarProductos(filtro = '') {
+  const contenedor = document.getElementById('resultado');
+  const contador = document.getElementById('contador');
+  contenedor.innerHTML = '';
 
-const searchInput = document.getElementById('search');
-const resultsBody = document.querySelector('#results tbody');
+  const filtroMinuscula = filtro.toLowerCase();
 
-mostrarResultados(productos);
-
-searchInput.addEventListener('input', () => {
-  const query = searchInput.value.trim().toLowerCase();
-  const resultadosFiltrados = productos.filter(producto =>
-    producto.descripcion.toLowerCase().includes(query) ||
-    producto.codigo.toLowerCase().includes(query)
+  const productosFiltrados = productos.filter(producto =>
+    producto.descripcion.toLowerCase().includes(filtroMinuscula) ||
+    producto.codigo.toLowerCase().includes(filtroMinuscula)
   );
-  mostrarResultados(resultadosFiltrados);
-});
 
-function mostrarResultados(resultados) {
-  resultsBody.innerHTML = '';
+  contador.textContent = Total de productos: ${productosFiltrados.length};
 
-  resultados.forEach(producto => {
-    const fila = document.createElement('tr');
+  productosFiltrados.forEach(producto => {
+    const div = document.createElement('div');
+    div.classList.add('producto');
 
-    fila.insertCell().textContent = producto.codigo;
-    fila.insertCell().textContent = producto.descripcion;
-    fila.insertCell().textContent = producto.stock;
-    fila.insertCell().textContent = producto.ubicacion;
-    fila.insertCell().textContent = producto.precio;
-    fila.insertCell().textContent = producto.stock > 0 ? 'Disponible' : 'No disponible';
+    let estado = producto.stock === 0 ? '<span class="no-disponible">NO DISPONIBLE</span>' : 'DISPONIBLE';
 
-    resultsBody.appendChild(fila);
+    div.innerHTML = `
+      <strong>${producto.descripcion}</strong><br>
+      Código: ${producto.codigo}<br>
+      Ubicación: ${producto.ubicacion}<br>
+      Stock: ${producto.stock}<br>
+      Precio: ${producto.precio ? '$' + producto.precio : 'Sin precio'}<br>
+      Estado: ${estado}
+    `;
+    contenedor.appendChild(div);
   });
 }
+
+document.getElementById('buscador').addEventListener('input', e => {
+  mostrarProductos(e.target.value);
+});
+
+mostrarProductos();
