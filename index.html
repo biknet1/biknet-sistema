@@ -1,48 +1,16 @@
-[14:31, 2/7/2025] Marce Lucero: import productos from './datos.js';
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestión de Repuestos</title>
+</head>
+<body>
+  <h1>Gestión de Repuestos</h1>
+  <input type="text" id="buscador" placeholder="Buscar por código o descripción..." />
+  <div id="resultados"></div>
 
-const searchInput = document.getElementById("search");
-const resultsTable = document.getElementById("results").getElementsByTagName("tbody")[0];
-
-function renderResults(filteredProducts) {
-  resultsTable.innerHTML = "";
-
-  filteredProducts.forEach(producto => {
-    const row = resultsTable.insertRow();
-
-    row.insertCell().textContent = producto.codigo;
-    row.insertCell().textContent = producto.descripcion;
-    row.insertCell().textContent = producto.stock;
-    row.insertCell().textContent = producto.ubicacion;
-    row.insertCell().textContent = producto.precio;
-    row.insertCell().textContent = producto.stock > 0 ? "Disponible" : "No disponible";
-  });
-}
-
-// Mostrar todos los productos al inicio
-renderResults(product…
-[14:33, 2/7/2025] Marce Lucero: const productos = [
-  {
-    codigo: "1145",
-    descripcion: "SOPORTE CAJA CHEVROLET CORSA",
-    stock: 2,
-    ubicacion: "DEPÓSITO 1, PASILLO 3, ESTANTERÍA 5, ESTANTE 1",
-    precio: "1"
-  },
-  {
-    codigo: "1146",
-    descripcion: "SOPORTE MOTOR CORSA LADO DISTRIBUCIÓN",
-    stock: 2,
-    ubicacion: "DEPÓSITO 1, PASILLO 3, ESTANTERÍA 5, ESTANTE 1",
-    precio: "1"
-  },
-  {
-    codigo: "1147",
-    descripcion: "SOPORTE MOTOR CORSA LADO CAJA",
-    stock: 2,
-    ubicacion: "DEPÓSITO 1, PASILLO 3, ESTANTERÍA 5, ESTANTE 1",
-    precio: "1"
-  }
-  // Agregá más productos acá siguiendo el mismo formato...
-];
-
-export default productos;
+  <script src="datos.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
