@@ -1,36 +1,32 @@
 import productos from './datos.js';
 
 const searchInput = document.getElementById("search");
-const resultsBody = document.querySelector("#results tbody");
-const totalSpan = document.getElementById("total");
+const resultsTable = document.getElementById("results").getElementsByTagName("tbody")[0];
+
+function renderResults(filteredProducts) {
+  resultsTable.innerHTML = "";
+
+  filteredProducts.forEach(producto => {
+    const row = resultsTable.insertRow();
+
+    row.insertCell().textContent = producto.codigo;
+    row.insertCell().textContent = producto.descripcion;
+    row.insertCell().textContent = producto.stock;
+    row.insertCell().textContent = producto.ubicacion;
+    row.insertCell().textContent = producto.precio;
+    row.insertCell().textContent = producto.stock > 0 ? "Disponible" : "No disponible";
+  });
+}
 
 // Mostrar todos los productos al inicio
-mostrarResultados(productos);
+renderResults(productos);
 
 // Filtrado dinámico
 searchInput.addEventListener("input", () => {
-  const query = searchInput.value.trim().toLowerCase();
-  const resultadosFiltrados = productos.filter(producto =>
-    producto.descripcion.toLowerCase().includes(query) ||
-    producto.codigo.toLowerCase().includes(query)
+  const query = searchInput.value.toLowerCase();
+  const filtered = productos.filter(p =>
+    p.codigo.toLowerCase().includes(query) ||
+    p.descripcion.toLowerCase().includes(query)
   );
-  mostrarResultados(resultadosFiltrados);
+  renderResults(filtered);
 });
-
-function mostrarResultados(resultados) {
-  resultsBody.innerHTML = "";
-  totalSpan.textContent = Total de productos: ${resultados.length};
-
-  resultados.forEach(producto => {
-    const fila = document.createElement("tr");
-
-    fila.insertCell().textContent = producto.codigo;
-    fila.insertCell().textContent = producto.descripcion;
-    fila.insertCell().textContent = producto.stock;
-    fila.insertCell().textContent = producto.ubicacion;
-    fila.insertCell().textContent = producto.precio;
-    fila.insertCell().textContent = producto.stock > 0 ? "Disponible" : "No disponible";
-
-    resultsBody.appendChild(fila);
-  });
-}
