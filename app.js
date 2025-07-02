@@ -1,13 +1,13 @@
-import productos from "./datos.js";
+import productos from './datos.js';
 
 const searchInput = document.getElementById("search");
 const resultsBody = document.querySelector("#results tbody");
-const totalText = document.getElementById("totalProductos");
+const totalSpan = document.getElementById("total");
 
-// Mostrar todos los productos al iniciar
+// Mostrar todos los productos al inicio
 mostrarResultados(productos);
 
-// Filtrar resultados mientras se escribe
+// Filtrado dinámico
 searchInput.addEventListener("input", () => {
   const query = searchInput.value.trim().toLowerCase();
   const resultadosFiltrados = productos.filter(producto =>
@@ -19,7 +19,7 @@ searchInput.addEventListener("input", () => {
 
 function mostrarResultados(resultados) {
   resultsBody.innerHTML = "";
-  totalText.textContent = Total de productos: ${resultados.length};
+  totalSpan.textContent = Total de productos: ${resultados.length};
 
   resultados.forEach(producto => {
     const fila = document.createElement("tr");
