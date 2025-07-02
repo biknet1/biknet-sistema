@@ -159,6 +159,146 @@ const productos = [
     "precio": "",
     "stock": 2
   },
+  {
+    "codigo": "WP19930",
+    "descripcion": "PASTILLA DE FRENO DELANTERO FIAT UNO/VIVACE",
+    "stock": 1,
+    "ubicacion": "LOCAL, OFICINA, ESTANTERIA 2, ESTANTE G/3",
+    "precio": ""
+  },
+  {
+    "codigo": "WP18350P",
+    "descripcion": "PASTILLA DE FRENO DELANTERO TOYOTA ETIOS 12->",
+    "stock": 1,
+    "ubicacion": "LOCAL, OFICINA, ESTANTERIA 2, ESTANTE G/1",
+    "precio": ""
+  },
+  {
+    "codigo": "WP16330P",
+    "descripcion": "PASTILLA DE FRENO TRASERO COROLLA 06->",
+    "stock": 1,
+    "ubicacion": "LOCAL, OFICINA, ESTANTERIA 2, ESTANTE G/10",
+    "precio": ""
+  },
+  {
+    "codigo": "WP9900",
+    "descripcion": "PASTILLA DE FRENO DELANTERO PEUGEOT/CITROEN/RENAULT",
+    "stock": 1,
+    "ubicacion": "LOCAL, OFICINA, ESTANTERIA 2, ESTANTE G/15",
+    "precio": ""
+  },
+  {
+    "codigo": "2000/2",
+    "descripcion": "TOPE APOYA CAPOT VW POLO 96/00",
+    "stock": 10,
+    "ubicacion": "LOCAL, MOSTRADOR 1, CAJON 3",
+    "precio": ""
+  },
+  {
+    "codigo": "2000/5",
+    "descripcion": "TOPE APOYA CAPOT PEUGEOT 306 95/97",
+    "stock": 9,
+    "ubicacion": "LOCAL, MOSTRADOR 1, CAJON 3",
+    "precio": ""
+  },
+  {
+    "codigo": "2000/6",
+    "descripcion": "TOPE APOYA CAPOT FIAT",
+    "stock": 10,
+    "ubicacion": "LOCAL, MOSTRADOR 1, CAJON 3",
+    "precio": ""
+  },
+  {
+    "codigo": "98210834ZD",
+    "descripcion": "TERMINACION BAUL PEUGEOT 208 15/19 (GOOGLE)",
+    "stock": 1,
+    "ubicacion": "LOCAL, DEPTO 2, ESTANTERIA N°2, ESTANTE B",
+    "precio": ""
+  },
+  {
+    "codigo": "2000/4",
+    "descripcion": "TOPE APOYA CAPOT REN 19 93/00",
+    "stock": 10,
+    "ubicacion": "LOCAL, MOSTRADOR 1, CAJON 3",
+    "precio": ""
+  },
+  {
+    "codigo": "SOPRANGER",
+    "descripcion": "SOPORTE PARAGOLPE TRASERO RANGER 2016",
+    "stock": 1,
+    "ubicacion": "LOCAL, PASILLO 1, ESTANTERIA N°2, ESTANTE C",
+    "precio": ""
+  },
+  {
+    "codigo": "WP 9360",
+    "descripcion": "FILTRO DE HABITACULO FORD KA/FIESTA/ECOSPORT",
+    "stock": 0,
+    "ubicacion": "DEPTO 1, PASILLO 1, ESTANTERIA C N°13",
+    "precio": ""
+  },
+  {
+    "codigo": "WP 9318",
+    "descripcion": "FILTRO DE HABITACULO PEUGEOT/CITROEN",
+    "stock": 1,
+    "ubicacion": "DEPTO 1, PASILLO 1, ESTANTERIA I/8",
+    "precio": ""
+  },
+  {
+    "codigo": "WP 8440",
+    "descripcion": "PASTILLA DE FRENO KANGOO/ PARTNER/ 206/ 306",
+    "stock": 1,
+    "ubicacion": "DEPTO 1, OFICINA, EXHIBITOR K78, G/16",
+    "precio": ""
+  },
+  {
+    "codigo": "WP 9280",
+    "descripcion": "FILTRO DE HABITACULO FIAT PALIO/SIENA/STRADA/FIORINO",
+    "stock": 3,
+    "ubicacion": "DEPTO 1, PASILLO 1, ESTANTERIA I/7",
+    "precio": ""
+  },
+  {
+    "codigo": "WP 9166",
+    "descripcion": "FILTRO DE HABITACULO VOLKSWAGEN AMAROK/TRTANSPORTER",
+    "stock": 1,
+    "ubicacion": "DEPTO 1, PASILLO 1, ESTANTERIA I/6",
+    "precio": ""
+  },
+  {
+    "codigo": "WP 9036",
+    "descripcion": "FILTRO DE HABITACULO VOLKSWAGEN GOL TREND",
+    "stock": 2,
+    "ubicacion": "DEPTO 1, PASILLO 1, ESTANTERIA J/6",
+    "precio": ""
+  },
+  {
+    "codigo": "0986 BF0 587",
+    "descripcion": "FILTRO DE HABITACULO FORD KA/FIESTA/ECO SPORT DURATEC SIGMA",
+    "stock": 3,
+    "ubicacion": "DEPTO 1 PASILLO 1 ESTANTERIA J/ 13",
+    "precio": ""
+  },
+  {
+    "codigo": "WP 6928",
+    "descripcion": "FILTRO DE HABITACULO RENAULT KANGOO 01... en wega akx 35112",
+    "stock": 2,
+    "ubicacion": "DEPTO 1, PASILLO 1, ESTANTERIA k/1",
+    "precio": ""
+  },
+  {
+    "codigo": "0986 BF0 589",
+    "descripcion": "FILTRO DE HABITACULO FORD ECOSPORT/ FIESTA/ KA",
+    "stock": 3,
+    "ubicacion": "DEPTO 1, PASILLO 1, ESTANTERIA J/13",
+    "precio": ""
+  },
+  {
+    "codigo": "AKX 35285",
+    "descripcion": "FILTRO DE HABITACULO OPEL/ ZAFIRA/ ASTRA/ VECTRA",
+    "stock": 2,
+    "ubicacion": "DEPTO 1, PASILLO 1, ESTANTERIA L/6",
+    "precio": ""
+  }
 ];
 
 export default productos;
