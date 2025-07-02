@@ -1,33 +1,48 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <title>Buscador - Biknet Autopartes</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <h1>Buscador de Productos</h1>
+[14:31, 2/7/2025] Marce Lucero: import productos from './datos.js';
 
-  <div style="display: flex; justify-content: space-between; align-items: center;">
-    <input type="text" id="search" placeholder="Buscar por código o descripción..." style="flex-grow: 1;" />
-  </div>
+const searchInput = document.getElementById("search");
+const resultsTable = document.getElementById("results").getElementsByTagName("tbody")[0];
 
-  <table id="results">
-    <thead>
-      <tr>
-        <th>Código</th>
-        <th>Descripción</th>
-        <th>Stock</th>
-        <th>Ubicación</th>
-        <th>Precio</th>
-        <th>Disponibilidad</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Resultados van acá -->
-    </tbody>
-  </table>
+function renderResults(filteredProducts) {
+  resultsTable.innerHTML = "";
 
-  <script type="module" src="app.js"></script>
-</body>
-</html>
+  filteredProducts.forEach(producto => {
+    const row = resultsTable.insertRow();
+
+    row.insertCell().textContent = producto.codigo;
+    row.insertCell().textContent = producto.descripcion;
+    row.insertCell().textContent = producto.stock;
+    row.insertCell().textContent = producto.ubicacion;
+    row.insertCell().textContent = producto.precio;
+    row.insertCell().textContent = producto.stock > 0 ? "Disponible" : "No disponible";
+  });
+}
+
+// Mostrar todos los productos al inicio
+renderResults(product…
+[14:33, 2/7/2025] Marce Lucero: const productos = [
+  {
+    codigo: "1145",
+    descripcion: "SOPORTE CAJA CHEVROLET CORSA",
+    stock: 2,
+    ubicacion: "DEPÓSITO 1, PASILLO 3, ESTANTERÍA 5, ESTANTE 1",
+    precio: "1"
+  },
+  {
+    codigo: "1146",
+    descripcion: "SOPORTE MOTOR CORSA LADO DISTRIBUCIÓN",
+    stock: 2,
+    ubicacion: "DEPÓSITO 1, PASILLO 3, ESTANTERÍA 5, ESTANTE 1",
+    precio: "1"
+  },
+  {
+    codigo: "1147",
+    descripcion: "SOPORTE MOTOR CORSA LADO CAJA",
+    stock: 2,
+    ubicacion: "DEPÓSITO 1, PASILLO 3, ESTANTERÍA 5, ESTANTE 1",
+    precio: "1"
+  }
+  // Agregá más productos acá siguiendo el mismo formato...
+];
+
+export default productos;
