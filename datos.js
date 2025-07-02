@@ -19,17 +19,17 @@ const productos = [
     "codigo": "898D",
     "descripcion": "OPTICA IZQUIERDA KANGOO 08/12 COMANDO ELECTRICO SIN MOTOR",
     "ubicacion": "DEPTO 1, HAB 2, ESTANTERIA LADO PUERTA",
-    "proveedor": "CROMOSOL",
+    "proveedor": "",
     "precio": "",
     "stock": 1
   },
   {
-    "codigo": "5176/2",
-    "descripcion": "MOLDURA REJILLA RENAULT LOGAN 10/3 CAPOT SUP. CROMADA",
+    "codigo": "51762",
+    "descripcion": "MOLDURA REJILLA RENAULT LOGAN 10/3 CAPOT SUP CROMADA",
     "ubicacion": "DEPTO 2, COCINA, ESTANTERIA 1, CAJON Nº12",
-    "proveedor": "CROMOSOL",
+    "proveedor": "",
     "precio": "",
-    "stock": 1
+    "stock": 4
   },
   {
     "codigo": "a0765",
