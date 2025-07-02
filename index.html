@@ -2,45 +2,32 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gestión de Productos</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      background-color: #fff;
-      color: #000;
-    }
-    input[type="text"] {
-      padding: 8px;
-      width: 300px;
-      margin-bottom: 20px;
-      font-size: 16px;
-    }
-    .contador {
-      float: right;
-      font-weight: bold;
-      font-size: 14px;
-      margin-top: 10px;
-    }
-    .producto {
-      border: 1px solid #ccc;
-      padding: 10px;
-      margin-bottom: 10px;
-    }
-    .no-disponible {
-      color: red;
-      font-weight: bold;
-    }
-  </style>
+  <title>Buscador - Biknet Autopartes</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Lista de Productos</h1>
-  <div class="contador" id="contador">Total de productos: 0</div>
-  <input type="text" id="buscador" placeholder="Buscar por código o descripción..." />
-  <div id="resultado"></div>
+  <h1>Buscador de Productos</h1>
 
-  <script src="datos.js"></script>
-  <script src="app.js"></script>
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <input type="text" id="search" placeholder="Buscar por código o descripción..." style="flex-grow: 1;" />
+  </div>
+
+  <table id="results">
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Descripción</th>
+        <th>Stock</th>
+        <th>Ubicación</th>
+        <th>Precio</th>
+        <th>Disponibilidad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Resultados van acá -->
+    </tbody>
+  </table>
+
+  <script type="module" src="app.js"></script>
 </body>
 </html>
