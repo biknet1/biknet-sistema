@@ -38,7 +38,46 @@ const productos = [
     "proveedor": "CROMOSOL",
     "precio": "",
     "stock": 1
-  }
-];
+},
+{
+  "codigo": "83987",
+  "descripcion": "JUEGO PASTILLAS DE FRENO DELANTERAS PEUGEOT 206 / 207 COMPACT / PARTNER",
+  "ubicacion": "DEPTO 2, ESTANTERÍA 3, CAJA N°4",
+  "proveedor": "LUSQTOFF",
+  "precio": "",
+  "stock": 3
+},
+{
+  "codigo": "9547T",
+  "descripcion": "MANGUERA AIRE ACONDICIONADO GOL TREND / SURAN / VOYAGE (COMPRESOR A RADIADOR)",
+  "ubicacion": "DEPTO 1, MOSTRADOR, ESTANTE 2",
+  "proveedor": "",
+  "precio": "",
+  "stock": 2
+},
+{
+  "codigo": "K0021",
+  "descripcion": "SOPORTE MOTOR IZQUIERDO RENAULT KANGOO / CLIO / SYMBOL 1.6",
+  "ubicacion": "DEPTO 2, HABITACIÓN 1, ESTANTE C, CAJA 6",
+  "proveedor": "KRAFT",
+  "precio": "",
+  "stock": 1
+},
+{
+  "codigo": "1683E",
+  "descripcion": "BARRA ESTABILIZADORA DELANTERA FIAT UNO / DUNA",
+  "ubicacion": "DEPTO 2, ESTANTERÍA 2, ARRIBA DE CAJAS GRANDES",
+  "proveedor": "",
+  "precio": "",
+  "stock": 1
+},
+{
+  "codigo": "1146",
+  "descripcion": "KIT LEVAS VALVULAS CHEVROLET CORSA 1.6 8V",
+  "ubicacion": "DEPTO 1, ESTANTERÍA ALTA, CAJA 7",
+  "proveedor": "",
+  "precio": "",
+  "stock": 2
+}];
 
 export default productos;
