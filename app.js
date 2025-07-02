@@ -1,59 +1,35 @@
-import products from './datos.js';
+import productos from './datos.js';
 
 const searchInput = document.getElementById('searchInput');
-const resultsDiv = document.getElementById('results');
-const totalCountSpan = document.getElementById('totalCount');
+const resultsBody = document.querySelector('#results tbody');
+const totalCount = document.getElementById('totalCount');
 
-// Mostrar cantidad total de productos
-totalCountSpan.textContent = Total de productos: ${products.length};
+// Mostrar productos al inicio
+renderProducts(productos);
 
-// Función para mostrar productos
-function displayProducts(productsToDisplay) {
-  resultsDiv.innerHTML = '';
-  if (productsToDisplay.length === 0) {
-    resultsDiv.innerHTML = '<p>No se encontraron productos.</p>';
-    return;
-  }
+// Escuchar búsqueda
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value.trim().toLowerCase();
+  const filtrados = productos.filter(p =>
+    p.descripcion.toLowerCase().includes(query) ||
+    p.codigo.toLowerCase().includes(query)
+  );
+  renderProducts(filtrados);
+});
 
-  productsToDisplay.forEach(product => {
-    const productDiv = document.createElement('div');
-    productDiv.classList.add('product');
+// Renderizar productos en la tabla
+function renderProducts(lista) {
+  resultsBody.innerHTML = '';
+  totalCount.textContent = Total de productos: ${lista.length};
 
-    const codigo = document.createElement('p');
-    codigo.innerHTML = <strong>Código:</strong> ${product.codigo};
-    productDiv.appendChild(codigo);
+  lista.forEach(producto => {
+    const fila = resultsBody.insertRow();
 
-    const descripcion = document.createElement('p');
-    descripcion.innerHTML = <strong>Descripción:</strong> ${product.descripcion};
-    productDiv.appendChild(descripcion);
-
-    const stock = document.createElement('p');
-    stock.innerHTML = <strong>Stock:</strong> ${product.stock};
-    productDiv.appendChild(stock);
-
-    const ubicacion = document.createElement('p');
-    ubicacion.innerHTML = <strong>Ubicación:</strong> ${product.ubicacion};
-    productDiv.appendChild(ubicacion);
-
-    if (product.precio !== '') {
-      const precio = document.createElement('p');
-      precio.innerHTML = <strong>Precio:</strong> $${product.precio};
-      productDiv.appendChild(precio);
-    }
-
-    resultsDiv.appendChild(productDiv);
+    fila.insertCell().textContent = producto.codigo;
+    fila.insertCell().textContent = producto.descripcion;
+    fila.insertCell().textContent = producto.stock;
+    fila.insertCell().textContent = producto.ubicacion || '';
+    fila.insertCell().textContent = producto.precio || '';
+    fila.insertCell().textContent = producto.stock > 0 ? 'Disponible' : 'No disponible';
   });
 }
-
-// Mostrar todos los productos al inicio
-displayProducts(products);
-
-// Buscador dinámico
-searchInput.addEventListener('input', () => {
-  const searchTerm = searchInput.value.toLowerCase();
-  const filteredProducts = products.filter(product =>
-    product.descripcion.toLowerCase().includes(searchTerm) ||
-    product.codigo.toLowerCase().includes(searchTerm)
-  );
-  displayProducts(filteredProducts);
-});
