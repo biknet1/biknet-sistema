@@ -1,14 +1,14 @@
-import productos from './datos.js';
+import productos from "./datos.js";
 
-const searchInput = document.getElementById('search');
-const resultsBody = document.querySelector('#results tbody');
-const totalText = document.getElementById('total');
+const searchInput = document.getElementById("search");
+const resultsBody = document.querySelector("#results tbody");
+const totalText = document.getElementById("totalProductos");
 
 // Mostrar todos los productos al iniciar
 mostrarResultados(productos);
 
 // Filtrar resultados mientras se escribe
-searchInput.addEventListener('input', () => {
+searchInput.addEventListener("input", () => {
   const query = searchInput.value.trim().toLowerCase();
   const resultadosFiltrados = productos.filter(producto =>
     producto.descripcion.toLowerCase().includes(query) ||
@@ -18,25 +18,19 @@ searchInput.addEventListener('input', () => {
 });
 
 function mostrarResultados(resultados) {
-  resultsBody.innerHTML = '';
+  resultsBody.innerHTML = "";
+  totalText.textContent = Total de productos: ${resultados.length};
 
   resultados.forEach(producto => {
-    const fila = document.createElement('tr');
+    const fila = document.createElement("tr");
 
-    const disponibilidad = producto.stock > 0 ? 'Disponible' : 'No disponible';
-
-    fila.innerHTML = `
-      <td>${producto.codigo}</td>
-      <td>${producto.descripcion}</td>
-      <td>${producto.stock}</td>
-      <td>${producto.ubicacion}</td>
-      <td>${producto.precio || ''}</td>
-      <td>${disponibilidad}</td>
-    `;
+    fila.insertCell().textContent = producto.codigo;
+    fila.insertCell().textContent = producto.descripcion;
+    fila.insertCell().textContent = producto.stock;
+    fila.insertCell().textContent = producto.ubicacion;
+    fila.insertCell().textContent = producto.precio;
+    fila.insertCell().textContent = producto.stock > 0 ? "Disponible" : "No disponible";
 
     resultsBody.appendChild(fila);
   });
-
-  // Mostrar la cantidad total
-  totalText.textContent = Total de productos: ${resultados.length};
 }
