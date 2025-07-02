@@ -1,37 +1,48 @@
-function mostrarProductos(filtro = '') {
-  const contenedor = document.getElementById('resultado');
-  const contador = document.getElementById('contador');
-  contenedor.innerHTML = '';
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Buscador - Biknet Autopartes</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Buscador de Productos</h1>
 
-  const filtroMinuscula = filtro.toLowerCase();
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <input type="text" id="search" placeholder="Buscar por código o descripción..." style="flex-grow: 1;" />
+  </div>
 
-  const productosFiltrados = productos.filter(producto =>
-    producto.descripcion.toLowerCase().includes(filtroMinuscula) ||
-    producto.codigo.toLowerCase().includes(filtroMinuscula)
+  <table id="results">
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Descripción</th>
+        <th>Stock</th>
+        <th>Ubicación</th>
+        <th>Precio</th>
+        <th>Disponibilidad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Resultados van acá -->
+    </tbody>
+  </table>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
+[15:37, 2/7/2025] Marce Lucero: import productos from './datos.js';
+
+const searchInput = document.getElementById('search');
+const resultsBody = document.querySelector('#results tbody');
+
+mostrarResultados(productos);
+
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value.trim().toLowerCase();
+  const resultadosFiltrados = productos.filter(producto =>
+    producto.descripcion.toLowerCase().includes(query) ||
+    producto.codigo.toLowerCase().includes(query)
   );
-
-  contador.textContent = Total de productos: ${productosFiltrados.length};
-
-  productosFiltrados.forEach(producto => {
-    const div = document.createElement('div');
-    div.classList.add('producto');
-
-    let estado = producto.stock === 0 ? '<span class="no-disponible">NO DISPONIBLE</span>' : 'DISPONIBLE';
-
-    div.innerHTML = `
-      <strong>${producto.descripcion}</strong><br>
-      Código: ${producto.codigo}<br>
-      Ubicación: ${producto.ubicacion}<br>
-      Stock: ${producto.stock}<br>
-      Precio: ${producto.precio ? '$' + producto.precio : 'Sin precio'}<br>
-      Estado: ${estado}
-    `;
-    contenedor.appendChild(div);
-  });
-}
-
-document.getElementById('buscador').addEventListener('input', e => {
-  mostrarProductos(e.target.value);
+  mostrarResultados(resultadosFiltrados);
 });
-
-mostrarProductos();
