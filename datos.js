@@ -159,7 +159,6 @@ const productos = [
     "precio": "",
     "stock": 2
   },
-  
-    ];
+];
 
 export default productos;
