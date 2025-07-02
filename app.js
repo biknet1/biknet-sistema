@@ -1,34 +1,42 @@
-import productos from "./datos.js";
+import productos from './datos.js';
 
-const searchInput = document.getElementById("search");
-const resultsTable = document.getElementById("results").getElementsByTagName("tbody")[0];
-const totalSpan = document.getElementById("total");
+const searchInput = document.getElementById('search');
+const resultsBody = document.querySelector('#results tbody');
+const totalText = document.getElementById('total');
 
-function renderResults(filteredProducts) {
-    resultsTable.innerHTML = "";
+// Mostrar todos los productos al iniciar
+mostrarResultados(productos);
 
-    filteredProducts.forEach(producto => {
-        const row = resultsTable.insertRow();
-        row.insertCell().textContent = producto.codigo;
-        row.insertCell().textContent = producto.descripcion;
-        row.insertCell().textContent = producto.stock;
-        row.insertCell().textContent = producto.ubicacion;
-        row.insertCell().textContent = producto.precio;
-        row.insertCell().textContent = producto.stock > 0 ? "Disponible" : "No disponible";
-    });
-
-    totalSpan.textContent = Total de productos: ${filteredProducts.length};
-}
-
-// Mostrar todos los productos al inicio
-renderResults(productos);
-
-// Filtrado dinámico
-searchInput.addEventListener("input", () => {
-    const query = searchInput.value.toLowerCase();
-    const filtered = productos.filter(p =>
-        p.codigo.toLowerCase().includes(query) ||
-        p.descripcion.toLowerCase().includes(query)
-    );
-    renderResults(filtered);
+// Filtrar resultados mientras se escribe
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value.trim().toLowerCase();
+  const resultadosFiltrados = productos.filter(producto =>
+    producto.descripcion.toLowerCase().includes(query) ||
+    producto.codigo.toLowerCase().includes(query)
+  );
+  mostrarResultados(resultadosFiltrados);
 });
+
+function mostrarResultados(resultados) {
+  resultsBody.innerHTML = '';
+
+  resultados.forEach(producto => {
+    const fila = document.createElement('tr');
+
+    const disponibilidad = producto.stock > 0 ? 'Disponible' : 'No disponible';
+
+    fila.innerHTML = `
+      <td>${producto.codigo}</td>
+      <td>${producto.descripcion}</td>
+      <td>${producto.stock}</td>
+      <td>${producto.ubicacion}</td>
+      <td>${producto.precio || ''}</td>
+      <td>${disponibilidad}</td>
+    `;
+
+    resultsBody.appendChild(fila);
+  });
+
+  // Mostrar la cantidad total
+  totalText.textContent = Total de productos: ${resultados.length};
+}
