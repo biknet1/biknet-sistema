@@ -106,7 +106,7 @@ const productos = [
   {codigo: 'WL 10121', descripcion: 'FILTRO DE ACEITE CHEVROLET S-10/TRAILBLAZER', stock: 4, ubicacion: 'DEPTO 1, PASILLO 1, ESTANTERIA E/22', precio: ''},
   {codigo: 'WIN-032', descripcion: 'BARRA DE LED DE 65CM', stock: 1, ubicacion: 'LOCAL, COLGADO EXHIBIDOR ARRIBA (Caja N°13)', precio: 'U$S 40 (Costo)'},
   {codigo: 'WIN-029', descripcion: 'FARO DE LED EXPLORADORAS LED 3 LED', stock: 2, ubicacion: 'LOCAL, ARRIBA MOSTRADOR', precio: 'U$S 7 (Costo)'},
-  {codigo: 'WIN-028', descripcion: 'FARO DE LED 8 LED SPOTLIGHT', stock: 0, ubicacion: 'LOCAL, COLGADO EXHIBIDOR  N°5', precio: 'U$S 3
+  {codigo: 'WIN-028', descripcion: 'FARO DE LED 8 LED SPOTLIGHT', stock: 0, ubicacion: 'LOCAL, COLGADO EXHIBIDOR , N°5', precio: 'U$S 3
   {codigo: 'WF 8580', descripcion: 'FILTRO DE COMBUSTIBLE VOLKSWAGEN AMAROK 2.0 TDI 15/19 CON CONEXIÓN PARA SENSOR DE AGUA', stock: 1, ubicacion: 'DEPTO 1, PASILLO 1, ESTANTERIA G/16', precio: ''},
   {codigo: 'WF 8471', descripcion: 'FILTRO DE COMBUSTIBLE MERCEDES BENZ', stock: 2, ubicacion: 'DEPTO 1, PASILLO 1, ESTANTERIA G/15', precio: ''},
   {codigo: 'WF 8465', descripcion: 'FILTRO DE COMBUSTIBLE VOLKSWAGEN AMAROK 2.0 TDI 10->', stock: 2, ubicacion: 'DEPTO 1, PASILLO 1, ESTANTERIA G/14', precio: ''},
