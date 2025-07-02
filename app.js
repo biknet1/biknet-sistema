@@ -5,7 +5,11 @@ function mostrarProductos(lista) {
   lista.forEach((producto) => {
     const div = document.createElement("div");
     div.innerHTML = `
-      <strong>${producto.codigo}</strong> - ${producto.descripcion}<br><hr>`;
+      <strong>${producto.codigo}</strong> - ${producto.descripcion}<br>
+      <em>Stock:</em> ${producto.stock} <br>
+      <em>Ubicación:</em> ${producto.ubicacion} <br>
+      <em>Precio:</em> ${producto.precio || 'Sin precio'} <br>
+      <hr>`;
     contenedor.appendChild(div);
   });
 
@@ -17,8 +21,8 @@ function mostrarProductos(lista) {
 document.getElementById("buscador").addEventListener("input", function () {
   const texto = this.value.toLowerCase();
   const filtrados = productos.filter(p =>
-    p.descripcion.toLowerCase().includes(texto) ||
-    p.codigo.toLowerCase().includes(texto)
+    (p.descripcion && p.descripcion.toLowerCase().includes(texto)) ||
+    (p.codigo && p.codigo.toLowerCase().includes(texto))
   );
   mostrarProductos(filtrados);
 });
