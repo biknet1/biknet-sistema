@@ -70,14 +70,86 @@ const productos = [
   "proveedor": "",
   "precio": "",
   "stock": 1
-},
-{
-  "codigo": "1146",
-  "descripcion": "KIT LEVAS VALVULAS CHEVROLET CORSA 1.6 8V",
-  "ubicacion": "DEPTO 1, ESTANTERÍA ALTA, CAJA 7",
-  "proveedor": "",
-  "precio": "",
-  "stock": 2
-}];
+}, 
+{ 
+    "codigo": "8332",
+    "descripcion": "BUJE BARRA ESTABILIZADORA DELANTERA CLIO 2 / KANGOO / SYMBOL",
+    "ubicacion": "DEPTO 2, CAJÓN DE GOMA Nº3",
+    "proveedor": "",
+    "precio": "",
+    "stock": 4
+  },
+  {
+    "codigo": "9578",
+    "descripcion": "SOPORTE FILTRO DE AIRE PEUGEOT 206 NAFTA",
+    "ubicacion": "DEPTO 1, ESTANTE A, CAJA 2",
+    "proveedor": "PSA",
+    "precio": "",
+    "stock": 2
+  },
+  {
+    "codigo": "V572",
+    "descripcion": "VARILLA CAJA VELOCIDAD FIAT UNO / DUNA / 147",
+    "ubicacion": "DEPTO 1, ESTANTERÍA LATERAL, CAJA 9",
+    "proveedor": "",
+    "precio": "",
+    "stock": 1
+  },
+  {
+    "codigo": "0912",
+    "descripcion": "SOPORTE MOTOR DERECHO RENAULT 12",
+    "ubicacion": "DEPTO 2, ESTANTERÍA 4, CAJA Nº10",
+    "proveedor": "",
+    "precio": "",
+    "stock": 3
+  },
+  {
+    "codigo": "M122",
+    "descripcion": "MANGUERA ENTRADA AGUA MOTOR CORSA CLASSIC",
+    "ubicacion": "DEPTO 1, ESTANTERÍA A, CAJA MANGUERAS Nº1",
+    "proveedor": "MAVE",
+    "precio": "",
+    "stock": 2
+  },
+  {
+    "codigo": "5433",
+    "descripcion": "SOPORTE AMORTIGUADOR TRASERO GOL / SAVEIRO",
+    "ubicacion": "DEPTO 1, ESTANTERÍA LATERAL, CAJA Nº5",
+    "proveedor": "",
+    "precio": "",
+    "stock": 1
+  },
+  {
+    "codigo": "T421",
+    "descripcion": "TERMINAL DE DIRECCIÓN DERECHO RENAULT LOGAN / SANDERO",
+    "ubicacion": "DEPTO 2, CAJÓN TERMINALES Nº1",
+    "proveedor": "TRW",
+    "precio": "",
+    "stock": 1
+  },
+  {
+    "codigo": "T422",
+    "descripcion": "TERMINAL DE DIRECCIÓN IZQUIERDO RENAULT LOGAN / SANDERO",
+    "ubicacion": "DEPTO 2, CAJÓN TERMINALES Nº1",
+    "proveedor": "TRW",
+    "precio": "",
+    "stock": 1
+  },
+  {
+    "codigo": "H965",
+    "descripcion": "HORQUILLA EMBRAGUE PEUGEOT 504 / 505",
+    "ubicacion": "DEPTO 1, ESTANTERÍA 3, CAJA Nº12",
+    "proveedor": "",
+    "precio": "",
+    "stock": 3
+  },
+  {
+    "codigo": "C001",
+    "descripcion": "CAJA DIRECCIÓN COMPLETA RENAULT 9 / 11",
+    "ubicacion": "DEPTO 1, ESTANTERÍA INFERIOR, CAJA GRANDES",
+    "proveedor": "CIFAM",
+    "precio": "",
+    "stock": 1
+  }   ];
 
 export default productos;
