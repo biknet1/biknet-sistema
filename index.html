@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Buscador - Biknet Autopartes</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Buscador - Biknet Autopartes</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Buscador de Productos</h1>
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-  <input type="text" id="search" placeholder="Buscar por código o descripción..." style="flex-grow: 1;">
-  <span id="total" style="margin-left: 10px; white-space: nowrap;"></span>
-</div>
-    <table id="results">
-        <thead>
-            <tr>
-                <th>Código</th>
-                <th>Descripción</th>
-                <th>Stock</th>
-                <th>Ubicación</th>
-                <th>Precio</th>
-                <th>Disponibilidad</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Resultados van acá -->
-        </tbody>
-    </table>
-    <script type="module" src="app.js"></script>
+  <h1>Buscador de Productos</h1>
+
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <input type="text" id="search" placeholder="Buscar por código o descripción..." style="flex-grow: 1;">
+    <span id="total" style="margin-left: 10px; white-space: nowrap;"></span>
+  </div>
+
+  <table id="results">
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Descripción</th>
+        <th>Stock</th>
+        <th>Ubicación</th>
+        <th>Precio</th>
+        <th>Disponibilidad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Resultados van acá -->
+    </tbody>
+  </table>
+
+  <script type="module" src="app.js"></script>
 </body>
 </html>
